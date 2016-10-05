@@ -9,7 +9,6 @@ public class Person {
     protected String surname;
     Room room;
 
-
     public void setName(String newName){
         name = newName;
     }

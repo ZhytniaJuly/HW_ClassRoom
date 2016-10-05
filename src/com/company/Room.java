@@ -25,19 +25,9 @@ public class Room {
 
 
         for (int i = 0; i < persons.length; i++) {
-            if (persons[i].surname.equals(person.surname) ) persons[i]= null;
+            if (persons[i] != null && persons[i].surname.equals(person.surname) ) persons[i]= null;
         }
 
-    }
-
-    public void addPersons(Person person) {
-        if (count < persons.length) {
-            persons[count] = person;
-            count++;
-  //        System.out.println(person.toString());
-        } else {
-            System.out.println("the room is full");
-        }
     }
 
     public Person[] getPersons() {
@@ -50,5 +40,15 @@ public class Room {
 
     public void setRoomOpen(boolean roomOpen) {
         this.roomOpen = roomOpen;
+    }
+
+    public void addPersons(Person person) {
+        if (count < persons.length) {
+            persons[count] = person;
+            count++;
+            //        System.out.println(person.toString());
+        } else {
+            System.out.println("the room is full");
+        }
     }
 }
