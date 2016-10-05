@@ -22,8 +22,6 @@ public class Room {
     }
 
     public void removePersons(Person person)  {
-
-
         for (int i = 0; i < persons.length; i++) {
             if (persons[i] != null && persons[i].surname.equals(person.surname) ) persons[i]= null;
         }
